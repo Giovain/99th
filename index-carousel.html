@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>建党99周年</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="css/style.css" style="text/css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <style>
+    body{
+        font-size: 20px;
+    }
+/*鼠标点击上浮文字框*/
+   .ite:nth-child(-n+5){
+            /*定义父级的大小，设置高度为图片高度，便于隐藏文字部分*/
+            width: 231px;
+            height: 299px;
+            position: relative;/*overflow: hidden;隐藏文字部分*/
+            overflow: hidden;/*隐藏超出的部分，就是隐藏蒙版部分*/
+         }
+
+        .desc{
+            /*创建一个蒙版*/
+            height: 40px;
+            width: 170px;
+            padding-top:4px;
+            margin-left:30px;
+            background:#83806e;
+            position: absolute;
+            bottom:-100px;
+            left: 0;
+            transition: all linear 0.5s;
+            color:#f1f1f1;
+            font-size: 22px;
+         }
+         .ite:nth-child(-n+5):hover .desc{
+            bottom: 80px;
+         }
+        .ite .pic{
+        padding:45px;
+          }
+        .ite .desc{
+       text-align:center;
+         }
+        .ite:nth-child(1){
+        left:150px;
+        top:1800px;
+        position:absolute;  
+           }
+
+     .ite:nth-child(2){
+        left:400px;
+        top:1800px;
+        position:absolute;  
+     }
+     .ite:nth-child(3){
+        left:660px;
+        top:1800px;
+        position:absolute;    
+     }
+     .ite:nth-child(4){
+        left:940px;
+        top:1800px;
+        position:absolute;     
+     }
+     .ite:nth-child(5){
+        left:1200px;
+        top:1800px;
+        position:absolute; 
+     }
+     .li-p{
+       text-align: left;
+       width:800px;
+       margin-top: 220px;
+       margin-left: 220px;
+       margin-right: 220px;
+       padding-top:240px;
+     }
+/*<!-- 不忘初心 -->*/
+     .bu-p{
+     text-align:left;
+     width:1200px;
+     height:1100px;
+      margin: 0 30px 30px 0;
+      position: relative;
+      display: flex;
+      float: left;
+      top:50px;
+      padding:30px;
+      box-shadow: 2px 2px 5px #ccc;
+     }
+     h3{
+        font-weight:bold;
+     }
+/*党旗*/
+    .bigbox{
+        width:1200px;
+        height:600px;
+        margin-top:90px;
+
+          box-shadow: 2px 2px 2px 5px #ccc;
+     }
+      .box{
+            width: 482px;
+            height: 300px;
+            margin:100px auto;
+            padding-top:200px;
+
+        }
+        img{
+            transition:all 1s;
+        }
+
+   /* 通过transform 打乱图片*/
+        img:nth-child(1)[data-brief="dang01"]{
+            transform:translate(-100px ,-100px) rotate(123deg);
+        }
+
+        img:nth-child(2)[data-brief="dang02"]{
+            transform:translate(-300px ,200px) rotate(23deg);
+        }
+
+        img:nth-child(3)[data-brief="dang03"]{
+            transform:translate(300px ,-100px) rotate(23deg);
+        }
+
+        img:nth-child(4)[data-brief="dang04"]{
+            transform:translate(200px ,-200px) rotate(353deg);
+        }
+
+        .box:hover img{
+    /*transform:none;*/
+            transform:translate(0 ,0) rotate(0deg);
+        }
+</style>
+
+</head>
+
+<body>
+<!-- navigator -->
+    <nav class="navbar">
+        <div class="container">
+        <div class="logo">           
+      <div class="container">
+       <div class="row">
+        <div class="span12">
+            <ul class="nav nav-pills">
+                <li class="active">
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="about.html">作品说明</a>
+                </li>
+                <li>
+                    <a href="message.html">建议</a>
+                </li>
+                <li class="dropdown pull-right">
+                    <img alt="logo" src="images/logo.png" />
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+            </ul>
+            <p>
+                <a href="#"></a>
+            </p>
+            
+               </div>
+               </div>
+              </div>
+              </div>
+ 
+    </nav>
+<!-- banner -->
+    <div id="myCarousel" class="carousel slide">
+        <!--第一步：设计轮播图片的容器,用ID和css同时确定。-->
+        <ol class="carousel-indicators">
+            <!--第二步：设计轮播图片计数器。-->
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1">
+            </li>
+            <li data-target="#myCarousel" data-slide-to="2">
+            </li>
+        </ol>
+        <div class="carousel-inner">
+            <!--第三步：设计轮播图片播放区,使用 carousel-inner 样式来控制-->
+            <div class="item active"><img src="images/banner1.png" alt="贵州小七孔"></div>
+            <div class="item"><img src="images/banner2.jpg" alt="中大摄影 ">
+            </div>
+            <div class="item"><img src="images/banner3.jpg" alt="云南泸沽湖 "></div>
+        </div>
+        <!--第四步：设计轮播图片控制器。向前播放 carousel-control left和向后播放的控制器-->
+        <a href="#myCarousel" data-slide="prev" class="carousel-control left">&lsaquo;</a>
+        <a href="#myCarousel" data-slide="next" class="carousel-control right">&rsaquo;</a>
+    </div>
+<!-- content -->
+    <div class="container">
+<!-- 党的建立 -->
+        <div class="content picture">
+            <h2>党的建立</h2>
+            <div class="content-inner">
+                1920年初，李大钊、陈独秀等开始了建党的探索和酝酿。4月，俄共（布）西伯利亚局派维经斯基等一行来华，了解中国情况，考察能否在上海建立共产国际东亚书记处。他们先在北京会见了李大钊，后由李大钊介绍到上海会见陈独秀，共同商谈讨论了建党问题，促进了中国共产党的创立。从5月开始，陈独秀邀约李汉俊、李达、俞秀松等人多次商谈建党的问题。8月，陈独秀在上海成立了中国共产党的发起组。10月，李大钊在北京建立了共产主义小组。接着，在湖南、湖北、山东、广东等地相继建立了党的早期组织，同时在法国和日本也由留学生中的先进分子组成了党的早期组织。这些组织当时叫法不一，有的叫共产党，有的则称共产党小组或支部，由于它们性质相同，因此，后来统称它们为各地共产主义小组。
+                各地共产主义小组建立以后，开展了多方面的革命活动。为了广泛传播马克思列宁主义，统一建党思想，1920年9月，上海发起组把《新青年》杂志（从八卷一号开始）改为党的公开刊物；同年11月，又创办了《共产党》月刊，在全国主要城市秘密发行，这是中国共产党历史上第一个党刊。新青年出版社还翻译出版了《共产党宣言》、《国家与革命》等马克思列宁主义经典著作，以及多种宣传马克思主义的通俗小册子。各地共产主义小组又创办了一批面向工人的通俗刊物，在上海有《劳动界》，北京有《劳动音》和《工人月刊》，济南有《济南劳动月刊》，广州有《劳动者》等，对工人进行阶级意识的启蒙教育。在此基础上，各地共产主义小组积极深入工人群众，举办工人夜校，建立工会组织。各地还建立了社会主义青年团，发展了一批团员，青年团成为党的有力助手和后备军。
+                1921年3月，在俄共远东局和共产国际的建议和支持下，召开了各共产主义小组的代表会议，发表了关于党的宗旨和原则的宣言，并制定了临时性的纲领，确立了党的工作机构和工作计划，表明了党组织对社会主义青年团、工会、行会、文化教育团体和军队的态度。这次会议为党的成立作了必要的准备。维经斯基回国不久，1921年6月，共产国际派马林等到上海。他们建议召开党的全国代表大会，正式成立中国共产党。上海党的发起组在李达的主持下进行了全国代表大会的筹备工作，并向各地党的组织写信发出通知，要求各地选派两名代表出席大会。来自北京、汉口、广州、长沙、济南和日本的各地代表7月23日全部到达上海。
+                1921年7月23日—31日，在上海召开了中国共产党的第一次全国代表大会。1921年7月23日，中共一大在上海秘密召开。因突遭法国巡捕搜查，会议被迫休会。7月底，中共一大代表毛泽东、董必武、陈潭秋、王尽美、邓恩铭、李达等，由李达夫人王会悟做向导，从上海乘火车转移到嘉兴，再从狮子汇渡口登上渡船到湖心岛，最后转登王会悟预订的游船，并在游船中庄严宣告中国共产党的诞生。在船上，中共一大通过了党的第一个纲领和决议，正式宣告中国共产党庄严诞生。 [6]  纲领规定：党的名称是“中国共产党”；党的性质是无产阶级政党；党的奋斗目标是推翻资产阶级，废除资本所有制，建立无产阶级专政，实现社会主义和共产主义；党的基本任务是从事工人运动的各项活动，加强对工会和工人运动的研究与领导。大会选举产生党的领导机构——中央局，陈独秀为书记，张国焘负责组织，李达负责宣传。
+                党的一大宣告了中国共产党的正式成立。从此，中国诞生了完全新式的、以共产主义为目的、以马列主义为行动指南的、统一的工人阶级政党。中国共产党的成立，给灾难深重的中国人民带来了光明和希望，给中国革命指明了方向。正如毛泽东所说的那样，中国共产党的成立，是一个开天辟地的大事变。中国共产党成立后，中国革命的面目就为之一新了。
+                由于党的“一大”召开于7月，而在战争年代档案资料难寻，具体开幕日期无法查证，因此，1941年6月在党成立20周年之际，中共中央发文正式规定，7月1日为党的诞生纪念日。 
+            </div>
+        </div>
+<!-- 历代领导人 -->
+        <div class="content activity">
+        <p class="title2">历代领导人</p>
+              <div class="items">
+        <div class="ite">
+            <img src="images/1.jpg" alt="" width="170px" height="220px">
+            <div class="pic"><div class="desc">陈独秀</div></div>
+        </div>
+        <div class="ite">
+            
+                <img src="images/2.jpg" alt="" width="170px" height="220px">
+                 <div class="pic"><div class="desc">毛泽东</div>
+            </div>
+           
+        </div>
+        <div class="ite">
+            
+                <img src="images/3.jpg" alt="" width="170px" height="220px">
+             <div class="pic"><div class="desc">江泽民</div>
+             </div>
+           
+        </div>
+        <div class="ite">
+            
+                <img src="images/4.jpg" alt="" width="170px"  height="220px">
+            <div class="pic"><div class="desc">胡锦涛</div>
+            </div>
+
+        </div>
+        <div class="ite">
+            
+                <img src="images/5.jpg" alt="" width="170px" height="220px">
+                 <div class="pic"><div class="desc">习近平</div>
+                 </div>
+
+        </div>  <div class="li-p">
+           <p><br/>
+            中央局书记：陈独秀（1921年7月，中共一大选举产生）<br/>
+            中央执行委员会委员长：陈独秀（1922年7月，中共二大选举产生）<br/>
+            中央执行委员会委员长：陈独秀（1923年6月，中共三大选举产生）<br/>
+            中共中央总书记：陈独秀（1925年1月，中共四大推选）<br/>
+            中共中央总书记：陈独秀（1927年4月至5月，中共五大推选）<br/>
+            中共中央总书记：向忠发（1928年6月至7月，中共六大选举产生）（注：1931年，向忠发被国民党逮捕杀害后，由王明代理）<br/>
+            中共中央总书记：博古（秦邦宪）（1934年1月，中共六届五中全会产生）<br/>
+            中共中央总书记：张闻天（洛甫）（1935年1月，遵义会议选举产生）<br/>
+            中共中央主席：毛泽东（1945年6月，中共七届一中全会产生）<br/>
+            中共中央主席：毛泽东（1956年9月，中共八届一中全会选举产生）<br/>
+            中共中央主席：毛泽东（1969年4月，中共九届一中全会选举产生）<br/>
+            中共中央主席：毛泽东（1973年8月，中共十届一中全会选举产生）<br/>
+            中共中央主席：华国锋（1976年10月中央政治局会议通过，1977年7月十届三中全会追认）<br/>
+            中共中央主席：华国锋（1977年8月，中共十一届一中全会选举产生）<br/>
+            中共中央总书记：胡耀邦（1980年2月，中共十一届五中全会选举产生）<br/>
+            中共中央主席：胡耀邦（1981年6月，中共十一届六中全会选举产生）<br/>
+            中共中央总书记：胡耀邦（1982年9月，中共十二届一中全会选举产生）<br/>
+            中共中央总书记：赵紫阳（1987年11月，中共十三届一中全会产生）<br/>
+            中共中央总书记：江泽民（1989年6月，中共十三届四中全会产生）<br/>
+            中共中央总书记：江泽民（1992年10月19日，中共十四届一中全会选举产生）<br/>
+            中共中央总书记：江泽民（1997年9月，中共十五届一中全会选举产生）<br/>
+            中共中央总书记：胡锦涛（2002年11月，中共十六届一中全会选举产生）<br/>
+            中共中央总书记：胡锦涛（2007年10月，中共十七届一中全会选举产生）<br/>
+            中共中央总书记：习近平（2012年11月，中共十八届一中全会选举产生）<br/>
+            中共中央总书记：习近平（2017年10月，中共十九届一中全会选举产生)</p>
+         </div>
+        </div>
+<!-- 诗歌作品 -->
+        <div class="content gift">
+            <p class="title3">不忘初心</p>
+            <div class="bu-p">
+               <p><h3>1921——红船初心</h3>
+
+              中国共产党为中国人民谋幸福，为中华民族谋复兴。是中国共产党人的初心和使命，是激励一代代中国共产党人前赴后继、英勇奋斗的根本动力。<br/>
+
+              从1921年中国共产党成立时的50多名党员，到1949年新中国成立时的448.8万名党员，再到2019年底的9191.4万名党员，近百年历程中，一代又一代中国共产党人薪火相传、接续奋斗，跨过一道又一道沟坎，取得一个又一个胜利。<br/>
+
+              <h3>2020——建党99周年</h3>
+
+              中国共产党即将迎来百岁生日。立志于千秋伟业，百年恰是风华正茂。奋进新时代、踏上新征程，永远保持建党时的奋斗精神，永远保持对人民的赤子之心，中国共产党将永远年轻！<br/>
+
+              90后代表们表示：“我们一定发挥党员的先锋模范作用，贡献‘90后’的青春力量！”“‘90后’真的长大了，以前我们被别人保护，现在我们可以保护别人了。”“三十而立，我们立住了！”他们是20后、30后……90后、00后，他们来自各行各业，但他们都有一个共同的名字——中国共产党员！<br/><br/>
+
+              <h3>人民至上、克服挑战谋求幸福：</h3>
+
+              中国共产党自诞生之日起，就坚守为人民谋幸福的初心和使命。中国共产党成立99年的历史，就是一部为人民谋幸福的历史——巴勒斯坦民族解放运动（法塔赫）中央委员、阿拉伯关系和中国事务部部长阿巴斯·扎基如是说。<br/>
+
+              中国共产党坚持以人民为中心的发展思想，坚持人民至上，不懈奋斗，让人民过上好日子。伊拉克共产党总书记、前科技部长拉伊德·法赫米这样评论：中国共产党坚持以人民为中心的发展思想，体现了中国共产党的理想信念、性质宗旨和初心使命。<br/>
+              
+              时光进入2020年，突如其来的新冠疫情带来严峻挑战。世界看到，中国共产党带领中国人民筑起抗疫钢铁长城，谱写了人民至上、紧紧依靠人民的战“疫”篇章。<br/>
+
+             <h3> 只争朝夕、决战决胜脱贫攻坚：</h3>
+
+              在中国共产党成立99周年之际，中国将打赢脱贫攻坚战，为全球减贫事业做出重大贡献……中国的成功经验告诉我们，依靠正确决策和坚决执行，非洲国家也可以摆脱贫困——肯尼亚执政党朱比利党总书记拉斐尔·图朱这样评论。<br/>
+
+              中国共产党迎来99周年华诞，这也是中国全面建成小康社会和“十三五”规划收官之年。打赢脱贫攻坚战、全面建成小康社会，是中国共产党对人民的庄严承诺。<br/>
+
+             <h3> 和合共生、共建人类命运共同体：</h3>
+
+              中国共产党不仅是为中国人民谋幸福的政党，也是为人类进步事业而奋斗的政党……中国始终把自身发展寓于世界发展潮流之中，秉持人类命运共同体理念，肩负大国担当——这是古巴国际政治研究中心高级研究员何塞·罗瓦伊纳对中国共产党的深刻印象。<br/>
+
+              山川异域，风月同天。在全球公共卫生危机、经济严重衰退等挑战面前，中国秉持人类命运共同体理念，推动国际社会携手抗疫、共克时艰，促进世界经济稳定，推进全球治理，维护以联合国为核心的国际体系和以国际法为基础的国际秩序，展现负责任大国的担当，为世界带来信心和力量。<br/>
+
+
+         </p>
+            </div>
+         </div>
+       
+         </div>
+<!-- 党旗 -->
+   <div class="content part4">
+   <div class="title4">党旗</div>
+   <div class="bigbox">
+    <div class="box">
+        <img src="images/dang01.png" data-brief="dang01">
+        <img src="images/dang02.png" data-brief="dang02">
+        <img src="images/dang03.png" data-brief="dang03">
+        <img src="images/dang04.png" data-brief="dang04">
+        <img src="images/dang05.png" >
+        <img src="images/dang06.png" >
+        <img src="images/dang07.png">
+        <img src="images/dang08.png" >
+        <img src="images/dang09.png">
+    </div></div>
+   </div>
+
+</body>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js "></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js "></script>
+    <script>
+    $(function() {
+    //第五步：利用ID在JS中启用轮播图，可以设置三个参数interval（轮播切换时间）、pause（默认hover即鼠标悬停时停止播放）、wrap（默认true，持续循环）
+    $('#myCarousel').carousel({
+        interval: 3000,
+    });
+
+    var imgHeight = $('.carousel-inner img').height();
+    //设置垂直居中
+    $('.carousel-control').css('line-height', imgHeight + 'px');
+
+    //设置窗口变化时自动响应垂直居中
+    $(window).resize(function() {
+        var height = $('.carousel-inner img').eq(0).height() || $('.carousel-inner img').eq(1).height() || $('.carousel-inner img').eq(2).height();
+        $('.carousel-control').css('line-height', height + 'px');
+    });
+    //$('#myModal').modal();
+
+    });
+    </script>
+
+</html>

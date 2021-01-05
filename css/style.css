@@ -1,0 +1,108 @@
+@charset "utf-8" body {}
+
+.navbar .container{
+    text-align: center;
+}
+
+
+.nav-pills li a {
+    font-size: 22px;
+    font-family: "黑体";
+    text-align: center;
+    color: #000;
+}
+
+.nav li.active a,.nav li a:hover {
+    background: #7d0101;
+    color: #fff;
+}
+
+.carousel-control {
+    font-size: 100px;
+}
+
+.carousel-indicators {
+    position: absolute;
+}
+
+.content {
+    text-align: center;
+    padding: 0;
+
+}
+.content-picture{
+    width: 500px;
+
+}
+h2 {
+    line-height: 70px;
+    font-weight: bolder;
+    background-image: url(../images/separator.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-bottom: -5px;
+    position:absolute;
+    left:50px;
+}
+.title2{
+    line-height: 80px;
+    background-image: url(../images/separator.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-bottom: -5px;
+    position:relative;
+    left:-630px;
+    top:199px;
+    font-size:32px;
+    font-weight:800;
+}
+.title3{
+    line-height: 80px;
+    background-image: url(../images/separator.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-bottom: -5px;
+    position:relative;
+    left:-630px;
+    font-size:32px;
+    font-weight:800;
+}
+.title4{
+    line-height: 80px;
+    background-image: url(../images/separator.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-bottom: -5px;
+    position:relative;
+    left:-630px;
+    top:50px;
+    font-size:32px;
+    font-weight:800;
+}
+ul {
+    list-style-type: none;
+}
+
+.content-inner {
+    text-align: left;
+    margin-top: 60px;
+    text-indent:2em;
+    position: relative;
+    top: 115px;
+}
+
+.picture {
+    margin-top: 50px;
+    left:;
+}
+
+.logo{
+
+}
+.activity {}
+.snsicon{
+height: 80px;
+}
+footer{
+    text-align: center;
+}
