@@ -7,12 +7,400 @@
     <title>建党99周年</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/">
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" 
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" 
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" 
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="css/style.css" style="text/css" rel="stylesheet">
     <link href="css/carousel.css" rel="stylesheet">
     <style>
     body{
         font-size: 20px;
     }
+/* carousel         */
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  background-image: linear-gradient(#ce0001,#eb9a9a);
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 602px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 602px;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+/* style */
+        .header{
+	height: 80px;
+background-image: url(../images/logo.png) center center no-repeat;
+}
+.nav li a {
+    font-size: 20px;
+    font-family: "黑体";
+    text-align: center;
+    color: #000;
+}
+/* responsive-nav */
+/*! responsive-nav.js 1.0.39 by @viljamis */
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (min-width: 40em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+
+.nav li.active a,.nav li a:hover {
+    background: #000;
+    color: #fff;
+}
+/* style2 */
+ @charset "utf-8" body {}
+
+.navbar .container{
+    text-align: center;
+}
+
+
+.nav-pills li a {
+    font-size: 22px;
+    font-family: "黑体";
+    text-align: center;
+    color: #000;
+}
+
+.nav li.active a,.nav li a:hover {
+    background: #7d0101;
+    color: #fff;
+}
+
+.carousel-control {
+    font-size: 100px;
+}
+
+.carousel-indicators {
+    position: absolute;
+}
+
+.content {
+    text-align: center;
+    padding: 0;
+
+}
+.content-picture{
+    width: 500px;
+
+}
+h2 {
+    line-height: 70px;
+    font-weight: bolder;
+    background-image: url(../images/separator.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-bottom: -5px;
+    position:absolute;
+    left:50px;
+}
+.title2{
+    line-height: 80px;
+    background-image: url(../images/separator.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-bottom: -5px;
+    position:relative;
+    left:-630px;
+    top:199px;
+    font-size:32px;
+    font-weight:800;
+}
+.title3{
+    line-height: 80px;
+    background-image: url(../images/separator.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-bottom: -5px;
+    position:relative;
+    left:-630px;
+    font-size:32px;
+    font-weight:800;
+}
+.title4{
+    line-height: 80px;
+    background-image: url(../images/separator.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-bottom: -5px;
+    position:relative;
+    left:-630px;
+    top:50px;
+    font-size:32px;
+    font-weight:800;
+}
+ul {
+    list-style-type: none;
+}
+
+.content-inner {
+    text-align: left;
+    margin-top: 60px;
+    text-indent:2em;
+    position: relative;
+    top: 115px;
+}
+
+.picture {
+    margin-top: 50px;
+    left:;
+}
+
+.logo{
+
+}
+.activity {}
+.snsicon{
+height: 80px;
+}
+footer{
+    text-align: center;
+}
+/* style.min */
+ .slidizle{position:relative;overflow:hidden}
+        .slidizle-content{position:absolute;top:0;
+            left:0;width:100%;height:100%}.slidizle-slide{position:absolute;
+                top:0;left:0;width:100%;height:100%;background-size:cover;
+                background-position:50% 50%;display:none}
+        .slidizle-slide.active{display:block}
+        .slidizle-navigation{position:absolute;bottom:30px;left:0;width:100%;
+            text-align:center;z-index:10}.slidizle-navigation
+        li{display:inline-block;width:10px;height:10px;-moz-border-radius:5px;
+            -webkit-border-radius:5px;border-radius:5px;background:white;
+            opacity:.2;font-size:1px;text-indent:-99999px;margin:0 5px;
+            cursor:pointer;-moz-transition:opacity 0.2s ease-in-out 0s;
+            -o-transition:opacity 0.2s ease-in-out 0s;
+            -webkit-transition:opacity 0.2s ease-in-out;-webkit-transition-delay:0s;
+            transition:opacity 0.2s ease-in-out 0s}.slidizle-navigation li:hover,.slidizle-navigation li.active{opacity:1}.slidizle-next,.slidizle-previous{color:white;font-size:30px;position:absolute;top:50%;z-index:30;
+                -moz-transform:translateY(-50%);-ms-transform:translateY(-50%);
+                -webkit-transform:translateY(-50%);transform:translateY(-50%);
+                cursor:pointer;opacity:1;-moz-transition:opacity 0.2s ease-in-out 0s;
+                -o-transition:opacity 0.2s ease-in-out 0s;
+                -webkit-transition:opacity 0.2s ease-in-out;-webkit-transition-delay:0s;transition:opacity 0.2s ease-in-out 0s}.slidizle-next.disabled,.slidizle-previous.disabled{opacity:.2;cursor:default}.slidizle-next{right:30px}.slidizle-previous{left:30px}.slidizle-loading{position:absolute;top:0;left:0;width:100%;height:100%;
+                    background:#333 url("../img/loader.gif") no-repeat 50% 82%;
+                    opacity:0;pointer-events:none;-moz-transition:opacity 0.2s ease-in-out 0s;
+                    -o-transition:opacity 0.2s ease-in-out 0s;-webkit-transition:opacity 0.2s ease-in-out;
+                    -webkit-transition-delay:0s;
+                    transition:opacity 0.2s ease-in-out 0s}.loading 
+        .slidizle-loading{opacity:.8;pointer-events:auto}
+        .header{height:400px;background-size:cover;
+            text-align:center;color:white;padding-top:150px}
+        .container{max-width:1200px;margin:0 auto}
+        .text{text-align:center;color:#393939;padding:100px}
+        .sample{position:relative;width:100%;height:0;padding-bottom:56%;
+            text-align:center;margin-bottom:50px}
+        .sample header{position:absolute;top:50%;left:0;
+            idth:100%;-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);
+            -webkit-transform:translateY(-50%);transform:translateY(-50%);
+            text-shadow:black 0 0 50px;background:rgba(0,0,0,0.3);padding:50px 150px;z-index:20}
+        .slider-progressbar{height:5px;width:100%;position:absolute;top:0;
+            left:0;background:#fbd665;z-index:20}.slider--animated .slidizle-content >
+        .active ~ .slidizle-slide{-moz-transform:translateX(100%);-ms-transform:translateX(100%);
+            -webkit-transform:translateX(100%);transform:translateX(100%)}.slider--animated 
+        .slidizle-slide{-moz-transform:translateX(-100%);
+            -ms-transform:translateX(-100%);-webkit-transform:translateX(-100%);
+            transform:translateX(-100%);-moz-transition:-moz-transform 0.5s ease-in-out 0s;
+            -o-transition:-o-transform 0.5s ease-in-out 0s;
+            -webkit-transition:-webkit-transform 0.5s ease-in-out;
+            -webkit-transition-delay:0s;transition:transform 0.5s ease-in-out 0s;
+            display:block !important}.slider--animated .slidizle-slide
+        .active{-moz-transform:translateX(0);-ms-transform:translateX(0);
+            -webkit-transform:translateX(0);transform:translateX(0);z-index:2}
+        .slider--animated-up-down .slidizle-content > .active ~ 
+        .slidizle-slide{-moz-transform:translateY(100%);-ms-transform:translateY(100%);
+            -webkit-transform:translateY(100%);transform:translateY(100%)}
+        .slider--animated-up-down .slidizle-slide{-moz-transform:translateY(-100%);
+            -ms-transform:translateY(-100%);-webkit-transform:translateY(-100%);
+            transform:translateY(-100%);-moz-transition:-moz-transform 0.5s ease-in-out 0s;
+            -o-transition:-o-transform 0.5s ease-in-out 0s;
+            -webkit-transition:-webkit-transform 0.5s ease-in-out;
+            -webkit-transition-delay:0s;transition:transform 0.5s ease-in-out 0s;
+            display:block !important}.slider--animated-up-down 
+        .slidizle-slide.active{-moz-transform:translateY(0);
+            -ms-transform:translateY(0);-webkit-transform:translateY(0);
+            transform:translateY(0);z-index:2}.slidizle-navigation 
+        .slider-navigation-item{width:50px;height:30px;
+            background-size:cover;background-position:50% 50%;
+            border:2px solid white}.btn.btn--custom{background:white;-moz-border-radius:3px;
+                -webkit-border-radius:3px;border-radius:3px;
+                padding:5px 10px;color:black;text-transform:uppercase;
+     font-size:10px;font-weight:bold;outline:none}
 /*鼠标点击上浮文字框*/
    .ite:nth-child(-n+5){
             /*定义父级的大小，设置高度为图片高度，便于隐藏文字部分*/
@@ -358,5 +746,6 @@
 
     });
     </script>
+    
 
 </html>
